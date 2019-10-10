@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="UserSineWave.js"></script>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        input:invalid {
+            border: 2px dashed red;
+        }
+
+        input:valid {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body onload="onLoad()">
+    <div style="margin: 5px">
+    <table id="tableUserInput">
+        <tbody>
+            <tr>
+                <td style="display: inline;">Min Amplitude:</td>
+                <td><input maxlength="3" title="valid value 20 to 100" value="20"  pattern="\d+" 
+                    type="number" id="txtMaxAmplitude" required min=20 max=100 style="width: 50px"></td>
+                    <td style="display: inline;">Min Rate:</td>
+            </tr>
+            <tr>
+                <td style="display: inline;">Max Amplitude:</td>
+                <td><input maxlength="3" title="valid value 50 to 120"  value="50" pattern="\d+" 
+                    type="number" id="txtMinAmplitude" required min=20 max=100  style="width: 50px"></td>
+                    <td style="display: inline;">Max Rate:</td>
+            </tr>
+            <tr>
+                <td><button onclick="Draw()">Load</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <canvas id="myCanvas" style="border: black 1px solid;margin: 1px;width: 1;height: 1;"></canvas> </canvas>
+</div>
+</body>
+
+</html>

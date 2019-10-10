@@ -1,0 +1,6 @@
+0. Use translate to move origin.
+    context.translate(0, canvas.height);
+    context.scale(1, -1);
+1. Bounce the ball in gravity.
+2. Ball collision. Change of path and speed based on direction of collision. =>https://www.youtube.com/watch?v=789weryntzM&list=PLpPnRKq7eNW3We9VdCfx9fprhqXHwTPXL&index=7
+3. Chart-> Bar chart, line chart, Pie chart
