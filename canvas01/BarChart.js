@@ -50,10 +50,14 @@ class BarChart {
                 maxDimension = this.data[i].measure;
             }
         }
-        let ratio = this.width/maxDimension;
-        debugger;
+        let ratio = this.height/maxDimension;
+        for(let i=0;i<count;i++)
+        {
+            this.DrawBar(i*20 , this.bottomMargin , 10,40,"red","Blue")
+        }
     }
     DrawBar = function (x, y, w, h, text, foreColor, backColor) {
-
+        this.context.fillRect(x,y,w,h);
+        debugger;
     }
 }
