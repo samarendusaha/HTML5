@@ -64,11 +64,11 @@ function Animate() {
         })
     });
  
-    removedCircles = circles.filter(item => item.Collided == true);
-    //console.log(removedCircles.length);
+     removedCircles = circles.filter(item => item.Collided == true);
+    // // //console.log(removedCircles.length);
     circles = circles.filter(item => item.Collided == false);
     removedCircles.forEach(element => {
-        let c = SplitAndCloneCircle(element, 4);
+        c = SplitAndCloneCircle(element, 4);
         c.forEach(e => {
             e.Draw();
             circles.push(e);
@@ -90,7 +90,7 @@ function Draw(event) {
         '#FFF6E5',
         '#FF7F66'
     ];
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < 6; i++) {
         var x = Math.random() * (canvas.width - radius);
         var y = Math.random() * (canvas.height - radius);
         if (x < radius) {
@@ -123,8 +123,9 @@ function SplitAndCloneCircle(circle, noOfCircle) {
     let newCircles = [];
     for (let i = 0; i < noOfCircle; i++) {
         c = new Circle(circle.x, circle.y, 0, 0, 0, circle.color, circle.canvas);
-        c.radius = circle.radius / 2;
-        c.id = '' + Circle.id + i;
+        c.radius = circle.radius * 0.8;
+        //c.id = '' + Circle.id + i;
+        //c.Collided = false;
         // debugger;
         // console.log( c.radius);
         c.x = circle.x;

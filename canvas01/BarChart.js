@@ -24,6 +24,9 @@ class BarChart {
         this.topMargin = 50;
         this.bottomMargin = 50;
         this.rightMargin = 50;
+        this.leftChartMargin = 20;
+        this.rightChartMargin = 20;
+        this.barWidth = 30;
         this.width = this.canvas.width - this.rightMargin - this.leftMargin;
         this.height = this.canvas.height - this.topMargin - this.bottomMargin;
     }
@@ -53,7 +56,8 @@ class BarChart {
         let ratio = this.height/maxDimension;
         for(let i=0;i<count;i++)
         {
-            this.DrawBar(i*20 , this.bottomMargin , 10,40,"red","Blue")
+            this.DrawBar(this.leftMargin + this.leftChartMargin * i +  i*20 , this.bottomMargin , this.barWidth ,
+                ratio * this.data[i].measure ,"red","Blue")
         }
     }
     DrawBar = function (x, y, w, h, text, foreColor, backColor) {
